@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/ko.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <header class="top-header top-header--transparent">
+      <div class="header__top">
+        <div class="header__column">
+          <i class="fa fa-fighter-jet"></i> <i class="fa fa-wifi"></i>
+        </div>
+        <div class="header__column"><span class="header__time"></span></div>
+        <div class="header__column">
+          <i class="fa fa-moon-o"></i> <i class="fa fa-bluetooth-b"></i>
+          <span class="header__battery"
+            >98% <i class="fa fa-battery-full"></i
+          ></span>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__column">
+          <a href="index.html"> <i class="fa fa-times fa-lg"></i> </a>
+        </div>
+        <div class="header__column"><i class="fa fa-user fa-lg"></i></div>
+      </div>
+    </header>
+    <main class="profile">
+      <header class="profile__header">
+        <div class="profile__header-container">
+          <img src="images/avatar.jpg" alt="" />
+          <h3 class="profile__header-title">Dongwoo</h3>
+        </div>
+      </header>
+      <div class="profile__container">
+        <div class="profile__info">albadw0428@gmail.com</div>
+        <div class="profile__actions">
+          <div class="profile__action">
+            <span class="profile__action-circle">
+              <i class="fa fa-comment fa-lg"></i>
+            </span>
+            <span class="profile__action-title">My Chatroom</span>
+          </div>
+          <div class="profile__action">
+            <span class="profile__action-circle">
+              <i class="fa fa-pencil fa-lg"></i>
+            </span>
+            <span class="profile__action-title">Edit Profile</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="bigScreenText">
+      <span>Please make your screen smaller</span>
+    </div>
+  </body>
+</html>
+<script>
+  $('document').ready(() => {
+    const time = moment().format('hh:mm');
+    $('.header__time').text(time);
+  });
+</script>
